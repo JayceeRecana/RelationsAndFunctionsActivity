@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relations and Functions Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="activity.css"> 
+</head>
+<body>
+
+    <!-- Name Input Section -->
+    <div id="name-section">
+     <h2>Welcome to the Relations and Functions Quiz</h2>
+     <p>Please enter your full name to begin:</p>
+     <input type="text" id="fullName" class="input-field" placeholder="Full Name" required>
+     <button type="button" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="quiz-section" style="display: none;">
+
+        <!-- Question 1 -->
+        <div class="question-container" id="question1">
+            <p>1. What is the definition of a relation?</p>
+            <div class="option-box" onclick="selectOption(this)">A set of ordered pairs</div>
+            <div class="option-box" onclick="selectOption(this)">A single ordered pair</div>
+            <div class="option-box" onclick="selectOption(this)">A function</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(1)">Next</button>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-container" id="question2">
+            <p>2. What describes a function?</p>
+            <div class="option-box" onclick="selectOption(this)">Set of ordered pairs</div>
+            <div class="option-box" onclick="selectOption(this)">Mapping of elements</div>
+            <div class="option-box" onclick="selectOption(this)">Set of values</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(2)">Next</button>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-container" id="question3">
+            <p>3. What is an injective function?</p>
+            <div class="option-box" onclick="selectOption(this)">Onto</div>
+            <div class="option-box" onclick="selectOption(this)">Bijective</div>
+            <div class="option-box" onclick="selectOption(this)">1 to 1</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(3)">Next</button>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-container" id="question4">
+            <p>4. What is the term for a set of ordered pairs?</p>
+            <div class="option-box" onclick="selectOption(this)">A function</div>
+            <div class="option-box" onclick="selectOption(this)">A relation</div>
+            <div class="option-box" onclick="selectOption(this)">An ordered set</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(4)">Next</button>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-container" id="question5">
+            <p>5. What is the term for a function that is injective?</p>
+            <div class="option-box" onclick="selectOption(this)">Injective</div>
+            <div class="option-box" onclick="selectOption(this)">Surjective</div>
+            <div class="option-box" onclick="selectOption(this)">Bijective</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(5)">Next</button>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-container" id="question6">
+            <p>6. What is a surjective function?</p>
+            <div class="option-box" onclick="selectOption(this)">One-to-one mapping</div>
+            <div class="option-box" onclick="selectOption(this)">Not injective</div>
+            <div class="option-box" onclick="selectOption(this)">Onto</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(6)">Next</button>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-container" id="question7">
+            <p>7. What is a bijective function?</p>
+            <div class="option-box" onclick="selectOption(this)">Only injective</div>
+            <div class="option-box" onclick="selectOption(this)">One-to-one and Onto</div>
+            <div class="option-box" onclick="selectOption(this)">Only surjective</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(7)">Next</button>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-container" id="question8">
+            <p>8. What does function composition refer to?</p>
+            <div class="option-box" onclick="selectOption(this)">Applying one function to the result of another</div>
+            <div class="option-box" onclick="selectOption(this)">Adding two functions</div>
+            <div class="option-box" onclick="selectOption(this)">Finding the inverse of a function</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(8)">Next</button>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-container" id="question9">
+            <p>9. What is the domain of a function?</p>
+            <div class="option-box" onclick="selectOption(this)">Set of all possible outputs</div>
+            <div class="option-box" onclick="selectOption(this)">The range</div>
+            <div class="option-box" onclick="selectOption(this)">Set of all possible inputs</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(9)">Next</button>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question-container" id="question10">
+            <p>10. What is the range of a function?</p>
+            <div class="option-box" onclick="selectOption(this)">Set of all possible inputs</div>
+            <div class="option-box" onclick="selectOption(this)">Set of all possible outputs</div>
+            <div class="option-box" onclick="selectOption(this)">The domain</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(10)">Next</button>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question-container" id="question11">
+            <p>11. What is an inverse relation?</p>
+            <div class="option-box" onclick="selectOption(this)">A relation formed by swapping the elements of ordered pairs</div>
+            <div class="option-box" onclick="selectOption(this)">A function that is the inverse of another</div>
+            <div class="option-box" onclick="selectOption(this)">A reflexive relation</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(11)">Next</button>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question-container" id="question12">
+            <p>12. What does reflexive mean in terms of relations?</p>
+            <div class="option-box" onclick="selectOption(this)">Each element is distinct</div>
+            <div class="option-box" onclick="selectOption(this)">A function has an inverse</div>
+            <div class="option-box" onclick="selectOption(this)">Every element is related to itself</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(12)">Next</button>
+        </div>
+
+            <!-- Question 13 -->
+        <div class="question-container" id="question13">
+            <p>13. What is the definition of a function?</p>
+            <div class="option-box" onclick="selectOption(this)">A relation where each input has one output</div>
+            <div class="option-box" onclick="selectOption(this)">Any set of ordered pairs</div>
+            <div class="option-box" onclick="selectOption(this)">A set of functions</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(13)">Next</button>
+        </div>
+        
+            <!-- Question 14 -->
+        <div class="question-container" id="question14">
+            <p>14. Which of the following is not a function?</p>
+            <div class="option-box" onclick="selectOption(this)">y = x^2</div>
+            <div class="option-box" onclick="selectOption(this)">y = sqrt(x)</div>
+            <div class="option-box" onclick="selectOption(this)">y^2 = x</div>
+            <div class="option-box" onclick="selectOption(this)">y = 2x + 1</div>
+            <button type="button" class="next-button" onclick="nextQuestion(14)">Next</button>
+        </div>
+        
+            <!-- Question 15 -->
+        <div class="question-container" id="question15">
+            <p>15. What is the vertical line test?</p>
+            <div class="option-box" onclick="selectOption(this)">A method to determine if a graph represents a function</div>
+            <div class="option-box" onclick="selectOption(this)">A test for symmetry</div>
+            <div class="option-box" onclick="selectOption(this)">A way to find intercepts</div>
+            <div class="option-box" onclick="selectOption(this)">None of the above</div>
+            <button type="button" class="next-button" onclick="nextQuestion(15)">Finish</button>
+        </div>        
+
+    </div>
+
+    <div id="result-section" style="display: none; text-align: center;">
+        <h2>Quiz Completed!</h2>
+        <p id="result"></p>
+        <p id="score"></p>
+    </div>
+
+    <script>
+        let currentQuestion = 1;
+        let score = 0;
+        let name;
+
+        function startQuiz() {
+            name = document.getElementById('fullName').value;
+            if (name) {
+                document.getElementById('name-section').style.display = 'none';
+                document.getElementById('quiz-section').style.display = 'block';
+                showQuestion(currentQuestion);
+            } else {
+                alert("\nWhoops! You forgot to introduce Yourself. Every great quiz needs a Superstar Name to shine!");
+            }
+        }
+
+        function showQuestion(questionNumber) {
+            const questions = document.querySelectorAll('.question-container');
+            questions.forEach((question, index) => {
+                question.style.display = (index + 1 === questionNumber) ? 'block' : 'none';
+            });
+        }
+
+        function selectOption(selected) {
+            const options = selected.parentNode.children;
+            for (let i = 0; i < options.length; i++) {
+                options[i].classList.remove('selected');
+            }
+            selected.classList.add('selected');
+        }
+
+        function nextQuestion(questionNumber) {
+    const selectedOption = document.querySelector(`#question${questionNumber} .selected`);
+    
+    // Check if no option is selected
+    if (!selectedOption) {
+        alert("\nRemember, in both math and life, neglecting to choose can lead to undefined results, Make a selection!\n\nRelations and Functions Reporters");
+        return; // Exit the function to prevent moving to the next question
+    }
+
+    // Update score based on correct answers
+    if (questionNumber === 1 && selectedOption.textContent.includes('A set of ordered pairs')) score++;
+    if (questionNumber === 2 && selectedOption.textContent.includes('Mapping of elements')) score++;
+    if (questionNumber === 3 && selectedOption.textContent.includes('1 to 1')) score++;
+    if (questionNumber === 4 && selectedOption.textContent.includes('A relation')) score++;
+    if (questionNumber === 5 && selectedOption.textContent.includes('Injective')) score++;
+    if (questionNumber === 6 && selectedOption.textContent.includes('Onto')) score++;
+    if (questionNumber === 7 && selectedOption.textContent.includes('One-to-one and Onto')) score++;
+    if (questionNumber === 8 && selectedOption.textContent.includes('Applying one function to the result of another')) score++;
+    if (questionNumber === 9 && selectedOption.textContent.includes('Set of all possible inputs')) score++;
+    if (questionNumber === 10 && selectedOption.textContent.includes('Set of all possible outputs')) score++;
+    if (questionNumber === 11 && selectedOption.textContent.includes('A relation formed by swapping the elements of ordered pairs')) score++;
+    if (questionNumber === 12 && selectedOption.textContent.includes('Every element is related to itself')) score++;
+    if (questionNumber === 13 && selectedOption.textContent.includes('A relation where each input has one output')) score++;
+    if (questionNumber === 14 && selectedOption.textContent.includes('y^2 = x')) score++;
+    if (questionNumber === 15 && selectedOption.textContent.includes('A method to determine if a graph represents a function')) score++;
+    
+    if (questionNumber < 15) {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+    } else {
+        endQuiz();
+    }
+ }
+    function endQuiz() {
+            document.getElementById('quiz-section').style.display = 'none';
+            document.getElementById('result-section').style.display = 'block';
+            document.getElementById('result').textContent = `Thank you for participating, ${name}!`;
+            document.getElementById('score').textContent = `Your score is ${score} out of 15.`;
+        }
+    </script>
+
+</body>
+</html>

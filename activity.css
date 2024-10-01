@@ -1,0 +1,421 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Applying Poppins font */
+    background: linear-gradient(to right, #eef2f3, #8e9bfc); /* Soft gradient background */
+    background-size: cover; /* Make background cover the entire area */
+    background-attachment: fixed; /* Ensure background stays fixed during scrolling */
+    color: #343a40; /* Dark text for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    line-height: 1.4; /* Adjusted line height for readability */
+}
+
+/* Name Section */
+#name-section {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #ffffff; /* Clean white background */
+    padding: 40px; /* Increased padding for spaciousness */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: relative; /* For positioning pseudo-elements */
+}
+
+/* Decorative Circles */
+#name-section::before,
+#name-section::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: #28a74533; /* Light blue circles */
+    width: 100px; /* Size of the circles */
+    height: 100px; /* Size of the circles */
+    z-index: 0; /* Behind the text */
+}
+
+#name-section::before {
+    top: -40px; /* Position above the section */
+    left: -40px; /* Position to the left */
+}
+
+#name-section::after {
+    bottom: -40px; /* Position below the section */
+    right: -40px; /* Position to the right */
+}
+
+/* Name Section Title */
+#name-section h2 {
+    font-size: 1.8em; /* Reduced title size */
+    font-weight: 700; /* Bold weight for impact */
+    color: black;
+    margin-bottom: 15px; /* Space below title */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    position: relative; /* Position relative for layering */
+    z-index: 1; /* Bring title above circles */
+}
+
+/* Name Section Description */
+#name-section p {
+    font-size: 1em; /* Reduced description size */
+    margin-bottom: 25px; /* Increased space below paragraph */
+    color: #555; /* Darker gray for subtitle */
+}
+
+/* Input Field */
+.input-field {
+    width: 65%; /* Wider input field for visibility */
+    padding: 12px 10px; /* Slightly increased padding for input */
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 15px; /* Decreased space below input */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    font-size: 1.1em; /* Slightly smaller font for input */
+    font-family: 'Poppins', sans-serif; /* Poppins font for input */
+    font-weight: 550;
+}
+
+/* Focus Effect on Input */
+.input-field:focus {
+    border-color: #0056b3; /* Darker blue on focus */
+    box-shadow: 0 0 5px rgba(0, 91, 183, 0.5); /* Soft glow effect */
+}
+
+/* Start Quiz Button */
+button {
+    background-color: #2e3dc0e7; /* Bright blue button */
+    color: white; /* White text */
+    padding: 12px 25px; /* Increased padding for buttons */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1em; /* Smaller button font */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for hover */
+    font-family: 'Poppins', sans-serif; /* Poppins font for button */
+    margin-top: 10px; /* Increased gap between textbox and button */
+    margin-left: 6px;
+    display: block; /* Make button a block element */
+    margin: 20px auto; /* Center the button horizontally */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+/* Question Container */
+.question-container {
+    background-color: #ffffff; /* White background for questions */
+    border-radius: 20px; /* Rounded corners */
+    padding: 50px; /* Increased padding for more height */
+    width: 480px; /* Standard width */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 25px 0; /* Space above and below */
+    position: relative; /* For positioning pseudo-elements */
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+/* Decorative Geometry */
+.question-container::before {
+    content: '';
+    position: absolute;
+    border-radius: 15px; /* Rounded corners for the rectangle */
+    background-color: rgba(255, 193, 7, 0.2); /* Light yellow rectangle */
+    width: 150px; /* Width of rectangle */
+    height: 60px; /* Height of rectangle */
+    top: -30px; /* Position above the container */
+    left: -30px; /* Position to the left */
+}
+
+.question-container::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%; /* Circle */
+    background-color: rgba(40, 167, 69, 0.2); /* Light green circle */
+    width: 80px; /* Diameter of circle */
+    height: 80px; /* Diameter of circle */
+    bottom: -40px; /* Position below the container */
+    right: -40px; /* Position to the right */
+}
+
+/* Question Text */
+.question-container p {
+    font-size: 22px; /* Increased font size for convenience */
+    font-weight: 600;
+    color: black;
+}
+
+/* Option Box Styles */
+.option-box {
+    background-color: #fafafa; /* Very light gray for options */
+    border: 2px solid rgb(233, 187, 131);
+    border-radius: 10px; /* More rounded corners */
+    padding: 15px; /* Padding for options */
+    margin: 17px 0; /* Space between options */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1.1em; /* Larger font for accessibility */
+    text-align: left; /* Align text to the left */
+    transition: background-color 0.2s, transform 0.1s; /* Smooth transitions */
+    font-family: 'Poppins', sans-serif; /* Poppins font for options */
+    color: black;
+}
+
+.option-box:hover {
+    background-color: #d1ecf1; /* Light blue on hover */
+    transform: scale(1.01); /* Slight lift effect */
+}
+
+.option-box.selected {
+    background-color: #7CB9E8; /* Blue for selected option */
+    color: white; /* White text for contrast */
+}
+
+/* Next Button Styling */
+.next-button {
+    display: block;            /* Make the button a block element */
+    margin: 20px auto;       /* Center the button horizontally */
+    background-color: #62a17c;
+    color: white; /* White text */
+    padding: 12px 70px; /* Increased padding */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 17px; /* Smaller font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.2s; /* Transition for hover */
+    font-family: 'Poppins', sans-serif; /* Poppins font for next button */
+}
+
+/* Result Styling */
+#result {
+    background-color: #ffffff; /* White background for results */
+    border-radius: 20px; /* Rounded corners */
+    padding: 25px 5px; /* Increased padding for results */
+    width: 500px; /* Match question width */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 25px 0; /* Space above and below */
+    text-align: center; /* Center result text */
+    font-size: 20px; /* Base font size */
+    font-weight: 400; /* Normal font weight */
+}
+
+/* Result Styling */
+#result {
+    background-color: #ffffff; /* White background for results */
+    border-radius: 20px; /* Rounded corners */
+    padding: 25px; /* Increased padding for results */
+    width: 500px; /* Match question width */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 20px auto; /* Center the result container */
+    text-align: center; /* Center result text */
+    font-size: 20px; /* Base font size */
+    font-weight: 400; /* Normal font weight */
+}
+
+/* Result Title */
+#result-section {
+    text-align: center; /* Center the result title */
+    margin: 20px 0; /* Add margin around the title */
+}
+
+/* Result Title Styling */
+#result-section h2 {
+    font-size: 30px; /* Size of "Quiz Completed!" */
+    font-weight: 800; /* Bold weight for emphasis */
+    color: #343a40; /* Dark text color */
+}
+
+/* Thank You Container */
+#thank-you {
+    background-color: #ffffff; /* White background */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding */
+    width: 400px; /* Set same width as Score section */
+    margin: 15px auto; /* Centered */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow */
+    font-size: 20px; /* Font size */
+    font-weight: 600; /* Bold */
+    text-align: center; /* Center text */
+}
+
+/* Score Container */
+#score {
+    background-color: #ffffff; /* White background */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding */
+    width: 510px; /* Same width as Thank You section */
+    margin: 15px auto; /* Centered */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow */
+    font-size: 20px; /* Font size */
+    font-weight: 600; /* Bold */
+    text-align: center; /* Center text */
+}
+
+@media (max-width: 768px) {
+    /* Name Section */
+    #name-section {
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 82%; /* Take full width */
+    }
+
+    /* Input Field */
+    .input-field {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Start Quiz Button */
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+        margin-top: 10px;
+        width: 95%; /* Take full width */
+    }
+
+    .question-container {
+        padding: 15px;
+        width: 85%; /* Ensure full width */
+        max-width: 600px; /* Set a maximum width for larger screens */
+        margin: 10px auto; /* Center horizontally and add vertical spacing */
+        border-radius: 10px; /* Optional: rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    }
+    
+    .question-container p {
+        margin: 10 auto; /* Center the text */
+    }
+    
+    /* Option Box Styles */
+    .option-box {
+        font-size: 1em;
+        padding: 10px;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    /* Next Button */
+    .next-button {
+        padding: 10px 50px;
+        font-size: 16px;
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    #result-section p {
+        width: 100%; /* Full width */
+        max-width: 370px; /* Set a max width */
+        margin: 10px auto; /* Center the container */
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center; /* Center the text */
+        background-color: white; /* Ensure background matches design */
+        border-radius: 12px; /* Rounded corners for aesthetics */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    /* General body adjustments */
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Quiz Completion Title */
+    #result-section h2 {
+        text-align: center;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 390px) { 
+    /* Body adjustments for mobile */
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Name Section */
+    #name-section {
+        padding: 15px; /* Reduced padding for mobile */
+        margin: 0 auto;
+        width: 100%; /* Full width */
+        max-width: 350px; /* Slightly narrower to fit well */
+        box-sizing: border-box;
+    }
+
+    /* Input Field */
+    .input-field {
+        width: 100%; /* Full width */
+        padding: 10px; /* Reduced padding for better fit */
+        box-sizing: border-box;
+    }
+
+    /* Start Quiz Button */
+    button {
+        width: 100%; /* Full width for button */
+        max-width: 350px; /* Restrict width to prevent overflow */
+        padding: 10px; /* Reduced padding */
+        margin: 10px auto; /* Center button */
+        font-size: 1em;
+    }
+
+    /* Question Container */
+    .question-container {
+        padding: 30px; /* Reduced padding */
+        width: 100%; /* Full width */
+        max-width: 350px; /* Narrower container */
+        box-sizing: border-box;
+    }
+
+    /* Question Text */
+    .question-container p {
+        font-size: 16px; /* Reduced font size */
+        text-align: left; /* Align text to the left */
+    }
+
+    /* Option Box */
+    .option-box {
+        padding: 10px;
+        font-size: 1em;
+        text-align: center; /* Centered options */
+        margin: 10px 0;
+    }
+
+    /* Next Button */
+    .next-button {
+        width: 100%;
+        max-width: 350px; /* Match with container */
+        padding: 10px;
+        margin: 20px auto;
+        font-size: 1em;
+    }
+
+    /* Result Section Adjustments */
+    #result-section p {
+        width: 100%; /* Full width */
+        max-width: 350px; /* Set a max width */
+        margin: 10px auto; /* Center the container */
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center; /* Center the text */
+        background-color: white; /* Ensure background matches design */
+        border-radius: 12px; /* Rounded corners for aesthetics */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+    
+    /* Quiz Completion Title */
+    #result-section h2 {
+        text-align: center;
+        font-size: 1.5em;
+    }
+}
